@@ -1,0 +1,11 @@
+.options-wrapper {
+    width: fit-content;
+    position: absolute;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 10;
+    border: 1px solid #555;
+    background-color: #333;
+    bottom: 11vh;
+}
