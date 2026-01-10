@@ -5,7 +5,7 @@
     padding: 10px;
     border-radius: 20px;
     z-index: 10;
+    bottom: 50px;
     border: 1px solid #555;
     background-color: #333;
-    bottom: 12vh;
 }

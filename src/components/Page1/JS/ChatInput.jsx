@@ -36,10 +36,10 @@ const ChatInput = ({ files, styles }) => {
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                     onInput={adjustHeight}
-                    placeholder="Задай любой вопрос..."
+                    placeholder={!isOpenOptions && "Задай любой вопрос..."}
                     className="chat-input-text-area"
                 />
-                <button className="options-btn" onClick={openOptionsFunction}>+</button>
+                <button className="options-btn" onClick={openOptionsFunction}>{!isOpenOptions ? "+" : "x"}</button>
                 {files && <div>{files}</div>}
                 <button className="send-btn">↑</button>
             </div>
