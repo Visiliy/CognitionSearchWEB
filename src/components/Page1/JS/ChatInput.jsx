@@ -19,6 +19,14 @@ const ChatInput = ({ files, styles }) => {
         }
     };
 
+    const handleOptionClick = (index) => {
+    
+        if (index === 0) {
+        } else if (index === 1) {
+        } else if (index === 2) {
+        }
+    };
+
     useEffect(() => {
         adjustHeight();
     }, [text]);
@@ -28,7 +36,7 @@ const ChatInput = ({ files, styles }) => {
             <h2 className="main-text-1">Cognition</h2>
             <h3 className="main-text-2">Точность и информативность превыше всего</h3>
             {
-                isOpenOptions && <Options />
+                isOpenOptions && <Options handleOptionClick={handleOptionClick}/>
             }
             <div className="chat">
                 <textarea 

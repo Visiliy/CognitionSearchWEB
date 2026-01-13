@@ -9,3 +9,16 @@
     border: 1px solid #555;
     background-color: #333;
 }
+
+.li-in-options {
+    display: flex;
+    width: fit-content;
+    padding: 2px;
+}
+
+.li-in-options:hover {
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
