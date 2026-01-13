@@ -3,7 +3,7 @@ class OptionsSettings {
         this.base_options_names = base_options_names;
     }
 
-    changingNames(setOptionsNamesFalse, check_mark) {
+    changingNames(setOptionsNamesFalse, check_mark, index) {
         return setOptionsNamesFalse((prev) => {
             const updated = [...prev];
             const current = prev[index];
@@ -20,3 +20,5 @@ class OptionsSettings {
 
     }
 }
+
+export default OptionsSettings;

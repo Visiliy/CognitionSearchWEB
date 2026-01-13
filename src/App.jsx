@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from './components/Page1/JS/Head';
 import ChatInput from "./components/Page1/JS/ChatInput"
+import OptionsSettings from "./Servises/OptionsSettings.js"
 import "./App.css"
 
 const base_options_names = [
@@ -29,7 +30,6 @@ function App() {
   }, []);
 
   const chatWrapperStyle = {
-    position: 'absolute',
     top: '50%',
     left: '50%',
     position: "relative",
@@ -45,7 +45,7 @@ function App() {
     } else if (index === 1) {
     } else if (index === 2) {
     }
-    open_settings.changingNames(check_mark);
+    open_settings.changingNames(setOptionsNamesFalse, check_mark, index);
   };
 
   return (
