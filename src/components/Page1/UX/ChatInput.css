@@ -32,6 +32,9 @@
     max-height: 300px;
     overflow: hidden;
     color: white;
+    font-family: 'monospace';
+    white-space: pre;
+    tab-size: 4;
 }
 
 .chat-input-text-area::placeholder {
