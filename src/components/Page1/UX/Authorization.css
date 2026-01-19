@@ -1,0 +1,72 @@
+.authorization-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -50%);
+    color: white;
+    height: fit-content;
+    border-radius: 20px;
+    border: 1px solid #555;
+    padding: 20px;
+    background: url("src/assets/e14968ec-22c0-4b7b-8715-9fdc17729834.png");
+}
+
+.enter-warpper {
+    display: grid;
+    gap: 20px;
+}
+
+.main-mod-text {
+    font-size: 30px;
+    user-select: none;
+    text-align: center;
+}
+
+.email-input, .password-input {
+    border-radius: 20px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 16px;
+    padding: 2px;
+    outline: none;
+}
+
+.email-input::placeholder, .password-input::placeholder {
+    color: white;
+}
+
+.enter-form-btn {
+    height: 50px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.enter-form-btn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.to-reg-form-wrapper {
+    display: flex;
+    gap: 10px;
+    user-select: none;
+}
+
+.to-reg-btn {
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .authorization-wrapper {
+        width: 80%;
+    }
+}

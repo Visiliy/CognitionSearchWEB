@@ -2,14 +2,14 @@ import "../UX/Head.css";
 import logo from "../../../assets/logo.jpeg";
 import EnterBtn from "./EnterBtn";
 
-const Head = () => {
+const Head = ({ openAuthorizationWindows }) => {
     return (
         <div className="head-wrapper">
             <div className="head-container">
                 <img src={logo} alt="logo" className="head-logo" />
-                <span className="head-title">Cognition</span>
+                <span className="head-title">Cognition LLM</span>
             </div>
-            <EnterBtn />
+            <EnterBtn openAuthorizationWindows={openAuthorizationWindows}/>
         </div>
 
     );

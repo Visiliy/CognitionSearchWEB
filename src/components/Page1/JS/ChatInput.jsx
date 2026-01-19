@@ -2,7 +2,7 @@ import "../UX/ChatInput.css";
 import { useRef, useEffect, useState } from "react";
 import Options from "./Options";
 
-const ChatInput = ({ files, styles, optionsNamesFalse, HandleOptionClick, OpenOptionsFunction, isOpenOptions }) => {
+const ChatInput = ({ files, styles, optionsNamesFalse, HandleOptionClick, OpenOptionsFunction, isOpenOptions, isRenderWords }) => {
     const textareaRef = useRef(null);
     const [text, setText] = useState("");
 
@@ -20,8 +20,12 @@ const ChatInput = ({ files, styles, optionsNamesFalse, HandleOptionClick, OpenOp
 
     return (
         <div style={styles} >
-            <h2 className="main-text-1">Cognition</h2>
-            <h3 className="main-text-2">Точность и информативность превыше всего</h3>
+            {
+                isRenderWords && <>
+                    <h2 className="main-text-1">Cognition LLM</h2>
+                    <h3 className="main-text-2">Точность и информативность превыше всего</h3>
+                </>
+            }
             {
                 isOpenOptions && <Options 
                 handleOptionClick={HandleOptionClick} 

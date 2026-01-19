@@ -3,22 +3,28 @@ import Head from './components/Page1/JS/Head';
 import ChatInput from "./components/Page1/JS/ChatInput"
 import OptionsSettings from "./Servises/OptionsSettings.js"
 import "./App.css"
-
-const base_options_names = [
-  "Добавить файл", 
-  "Web-поиск",
-  "Cпециализировнный поиск"
-];
-
-const open_settings = new OptionsSettings(base_options_names);
+import Authorization from './components/Page1/JS/Authorization.jsx';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
   const [isOpenOptions, setIsOpenOptions] = useState(false);
+  const [isOpenAuthorizationWindows, setIsOpenAuthorizationWindows] = useState(false);
+
+  const base_options_names = [
+    "Добавить файл", 
+    "Web-поиск",
+    "Cпециализировнный поиск"
+  ];
+  
+  const open_settings = new OptionsSettings(base_options_names);
 
   const openOptionsFunction = () => {
     setIsOpenOptions(!isOpenOptions);
   };
+
+  const openAuthorizationWindows = () => {
+    setIsOpenAuthorizationWindows(!isOpenAuthorizationWindows)
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -50,16 +56,21 @@ function App() {
 
   return (
     <>
-      <Head />
-      <div className="chat-input-wrapper">
-        <ChatInput 
-          styles={chatWrapperStyle} 
-          optionsNamesFalse={optionsNamesFalse} 
-          HandleOptionClick={handleOptionClick}
-          OpenOptionsFunction={openOptionsFunction}
-          isOpenOptions={isOpenOptions}
-        />
-      </div>
+      <Head openAuthorizationWindows={openAuthorizationWindows}/>
+      {
+        isOpenAuthorizationWindows ? <Authorization /> : <>
+          <div className="chat-input-wrapper">
+            <ChatInput 
+              styles={chatWrapperStyle} 
+              optionsNamesFalse={optionsNamesFalse} 
+              HandleOptionClick={handleOptionClick}
+              OpenOptionsFunction={openOptionsFunction}
+              isOpenOptions={isOpenOptions}
+              isRenderWords={true}
+            />
+          </div>
+        </>
+      }
     </>
   );
 }

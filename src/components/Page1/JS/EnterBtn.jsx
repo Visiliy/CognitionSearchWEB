@@ -1,9 +1,9 @@
 import "../UX/EnterBtn.css";
 
-const EnterBtn = () => {
+const EnterBtn = ({ openAuthorizationWindows }) => {
     return (
         <div className="enter-btn-wrapper">
-            <button className="enter-btn">Войти</button>
+            <button onClick={openAuthorizationWindows} className="enter-btn">Войти</button>
         </div>
     );
 };
