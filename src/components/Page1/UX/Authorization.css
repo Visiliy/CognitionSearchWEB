@@ -57,11 +57,24 @@
 
 .to-reg-form-wrapper {
     display: flex;
+    justify-content: center;
     gap: 10px;
     user-select: none;
 }
 
 .to-reg-btn {
+    cursor: pointer;
+}
+
+.is-business-bccount {
+    display: flex;
+    gap: 10px;
+}
+
+.is-business-bccount-checkbox {
+    border: 1px solid #555;
+    width: 20px;
+    border-radius: 7px;
     cursor: pointer;
 }
 

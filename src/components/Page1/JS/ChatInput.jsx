@@ -36,6 +36,7 @@ const ChatInput = ({ files, styles, optionsNamesFalse, HandleOptionClick, OpenOp
                 <textarea 
                     ref={textareaRef}
                     value={text}
+                    wrap="soft"
                     onChange={(e) => setText(e.target.value)}
                     onInput={adjustHeight}
                     placeholder={!isOpenOptions && "Задай любой вопрос..."}

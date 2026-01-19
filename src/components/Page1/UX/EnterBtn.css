@@ -5,7 +5,7 @@
 }
 
 .enter-btn {
-    width: 100px;
+    width: fit-content;
     padding: 12px;
     font-size: 18px;
     background-color: black;
